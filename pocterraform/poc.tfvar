@@ -1,0 +1,37 @@
+# This defines the variables for the POC
+# THIS CODE IS NOT FOR PRODUCTIVE USE. TEST/TRANING CODE ONLY
+# (c) by David Surey - Amazon Web Services EMEA SARL
+# 10/2019 - suredavi@amazon.de
+
+# Set the Account ID for the ingestion/ Kinesis Firehose Account
+account_a = "0000000000000"
+
+# Set the Account ID for the S3 Account
+account_b = "0000000000000"
+
+# Set the Account ID for the EMR Cluster Account
+account_c = "0000000000000"
+
+# Set the Region for the deployment
+region = "eu-central-1"
+
+# Set the Profile from ~/.aws/credentials for the for the ingestion/ Kinesis Firehose Account
+profile_ingestion = "INGESTION"
+
+# Set the Profile from ~/.aws/credentials for the for the EMR Cluster Account
+profile_processing = "PROCESSING"
+
+# Set the Profile from ~/.aws/credentials for the for the S3 Account
+profile_storage = "STORAGE"
+
+# Set the name of the source Bucket 
+sourcebucket = "SOURCEBUCKET"
+
+# Set the name of the Destination Bucket 
+destinationbucket = "DESTBUCKET"
+
+# Set the name of the EC2 Keypair to be created/updated for the EMR EC2 Instances
+ec2key = "EC2KEY"
+
+# Set the PUBLIC(!) keystring to be created/updated at the EC2 Keypair
+ec2pubkeystring = "PLACEKEYSTRINGHERE"

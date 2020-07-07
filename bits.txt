@@ -1,0 +1,34 @@
+EMR: 
+
+---
+
+jsonDf = spark.read.json("s3a://asuigdvowzudcwkieqwedev/2019/10/04/21/*")
+jsonDf = spark.read.json("s3a://asuigdvowzudcwkieqwe/2019/10/06/20/*")
+
+
+---
+
+aws cli role switch for instance
+
+vi .aws/config
+
+--
+
+[default]
+s3 =
+    signature_version = s3v4
+[profile default]
+role_arn = arn:aws:iam::463630300794:role/storage_emr_crossaccount_role
+credential_source = Ec2InstanceMetadata
+
+[profile local]
+role_arn = arn:aws:iam::559086915534:role/emr_crossaccount_role
+credential_source = Ec2InstanceMetadata
+~
+-----
+
+aws sts assume-role --role-arn arn:aws:iam::463630300794:role/storage_emr_crossaccount_role --role-session-name testassume --profile local
+
+aws s3 ls s3://sourcesfromidealofirehose/direct
+
+aws s3 cp s3://sourcesfromidealofirehose/direct/2019/10/07/15/firehose_stream-1-2019-10-07-15-05-12-5631d6eb-6da0-4a68-9b64-cb5533967439 .
