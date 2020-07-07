@@ -4,34 +4,34 @@
 # 10/2019 - suredavi@amazon.de
 
 # Set the Account ID for the ingestion/ Kinesis Firehose Account
-account_a = "158824805383"
+account_a = "XXXXXXXXXXX"
 
 # Set the Account ID for the S3 Account
-account_b = "463630300794"
+account_b = "XXXXXXXXXXX"
 
 # Set the Account ID for the EMR Cluster Account
-account_c = "559086915534"
+account_c = "XXXXXXXXXXX"
 
 # Set the Region for the deployment
-region = "eu-central-1"
+region = "XXXXXXXXXXX"
 
 # Set the Profile from ~/.aws/credentials for the for the ingestion/ Kinesis Firehose Account
-profile_ingestion = "workshop01"
+profile_ingestion = "XXXXXXXXXX"
 
 # Set the Profile from ~/.aws/credentials for the for the EMR Cluster Account
-profile_processing = "workshop03"
+profile_processing = "XXXXXXXXX"
 
 # Set the Profile from ~/.aws/credentials for the for the S3 Account
-profile_storage = "workshop02"
+profile_storage = "XXXXXXXXX"
 
 # Set the name of the source Bucket 
-sourcebucket = "sourcesfromidealofirehose"
+sourcebucket = "sourcesfrompocfirehose"
 
 # Set the name of the Destination Bucket 
-destinationbucket = "destinationfromidealofirehose"
+destinationbucket = "destinationfrompocfirehose"
 
 # Set the name of the EC2 Keypair to be created/updated for the EMR EC2 Instances
 ec2key = "emrtestkey"
 
 # Set the PUBLIC(!) keystring to be created/updated at the EC2 Keypair
-ec2pubkeystring = "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA38Xul+IiCechDme+n5dsKEYQZNY0xd4uMY7fTTUpM/rOAzNrLkUi1keMKJjg/jWYI3ERTDBLW/Wxh6c0x3C8zjHQQFyByfFCX1Cpju7oQ9jELii8OqpH5oIDRSM90kIjjCdu8DA4yyzMkmdRHFaRsO3ZvS4l5cFLGScbOApjZ7A2lWJGX/ZJxpZVbY+QYZIV+tgdaUi/AU75ZTFWs4e41xlNphjX8MwDkXc7Er/FmpEUYUeW2QOsCfLPRyMG2HGoP0bhYWAC+HGuLeWPjztImywe651PA9G8b865q8416gR6wmrqUbGclnytKorUydNTiZEqw0BETomC6qMV33Worw=="
+ec2pubkeystring = "ssh-rsa XXXXXXXXXXXXXXXX"

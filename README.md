@@ -1,4 +1,4 @@
-# POC 3-Account Data Pipeline Idealo
+# POC 3-Account Data Pipeline 
 ### Disclaimber: This is a Test/PoC Terraform deployemnt. IT'S NOT FOR PRODUCTION USE IN ANY CIRCUMSTANCES!
 
 * ## Description of the poc 
@@ -68,12 +68,12 @@ credential_source = Ec2InstanceMetadata
 then you can list and access the S3 Bucket:
 
 ```
-aws s3 ls s3://sourcesfromidealofirehose/direct
+aws s3 ls s3://sourcesfrompocfirehose/direct
 ```
 
 or copy an object to local like: 
 ```
-aws s3 cp s3://sourcesfromidealofirehose/direct/PATH/TO/OBJECT/ .
+aws s3 cp s3://sourcesfrompocfirehose/direct/PATH/TO/OBJECT/ .
 ```
 
   * ### Cleanup
