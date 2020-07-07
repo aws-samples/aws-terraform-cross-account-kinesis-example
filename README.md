@@ -1,15 +1,6 @@
 # POC 3-Account Data Pipeline 
-### Disclaimber: This is a Test/PoC Terraform deployemnt. IT'S NOT FOR PRODUCTION USE IN ANY CIRCUMSTANCES!
 
 * ## Description of the poc 
-this setup provides 3 accounts. One for Data Ingest, one for the S3 Bucket and one for the EMR/Processing
-Data is persisted by Kinesis Firehose (Account 1 ). Passed to the Bucket directly (Account 2). 
-A Lambda Function in Account 1 is notified by the Bucket in Account 2 to run a PutObjectACL onto the object and set "bucket-owner-full-control" so the object access can be freely granted within "Account 2"
-EMR/EC2 Instance/Notebook is using a role-switch to Access the data and process it. 
-The results are placed within the destination Bucket which will also trigger a lambda function to do the same (putobjectacl)
-The permissions are mostly following the least privileges principle for roles and buckets. 
-Nethertheless some permissions are too broad for productive use. 
-Network Setup is very basic. 
 
 * ## Prerequisites 
   * ### credential Setup
@@ -86,6 +77,5 @@ aws s3 cp s3://sourcesfrompocfirehose/direct/PATH/TO/OBJECT/ .
   -> Can be ignored.
 
   Error: you get something like "cannot assume-role" or "No creds in EC2InstanceMetadata" 
-  Run!
-  Just kidding. Especially if you test the deployment multible times or alter stuff. be sure to set sessions invalid. Relog from the master. Revoke Tokens using Management Console/CLI for the Instance Role of the EMR Master nodes. 
-   
+  Run! 
+  
