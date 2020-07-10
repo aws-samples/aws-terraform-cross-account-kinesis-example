@@ -47,8 +47,8 @@ add your role_arns like:
 
 ```
 [default]
-s3 =
-    signature_version = s3v4
+region = eu-central-1 
+
 [profile default]
 role_arn = arn:aws:iam::ACCOUNT_B_ID:role/storage_emr_crossaccount_role
 credential_source = Ec2InstanceMetadata
