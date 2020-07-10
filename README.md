@@ -1,25 +1,25 @@
-# POC 3-Account Data Pipeline 
+# Example 3-Account Data Pipeline 
 
-* ## Description of the poc 
+* ## Description of the Example 
 
 * ## Prerequisites 
   * ### credential Setup
   be sure to setup profiles for each of the accounts you want to place parts of the pipeline. 
   you'll need admin access in each of them. setup the accounts using ~/.aws/config and ~/.aws/credentials
   on the device you're planning to run the terraform from
+
   * ### Terraform Setup
   install terraform like: https://learn.hashicorp.com/terraform/getting-started/install.html 
   download from here: https://www.terraform.io/downloads.html 
 
   * ### Init for deployment
-  change into the pocterraform folder. 
   run: terraform init
   * ### Variables
-  look into poc.rtfvar and set the variables as needed. 
+  look into example.rtfvar and set the variables as needed. 
   * ### Deployment
-  run: terraform plan --var-file ./poc.tfvar
+  run: terraform plan --var-file ./example.tfvar
   if gone through w/o error
-  run: terraform apply --var-file ./poc.tfvar
+  run: terraform apply --var-file ./example.tfvar
   * ### Testing
   run: the script "input_sim.sh" 
   you will need to pass the profile to the profile used for your ingestion
@@ -34,7 +34,7 @@ successful looks like:
   ```
 }
 {
-    "RecordId": "bahsy37JoHzl2ZfuxYAVJtvFE5OoNMOd3GItaggsEOngOMMFTdlongTciU+A4L9JIceIITi1qeT9bczBJnj2wnANeATJXqf7JqGmy+zaMkaYWzt8aIkUbdCznMcOmSwPUVyLgjdXdoqz2EmePh7ty1UU0AGxa6sJ00M8uwn33AnksXLNX1dqLODv/ruamKinAvgS0Af4ZXTWr0s+Q+2wUbT1QTbZK5rf",
+    "RecordId": "XXXXXXXXXXXXXXXXXXXXXXXXXX",
     "Encrypted": false
 }
   ```
@@ -59,16 +59,16 @@ credential_source = Ec2InstanceMetadata
 then you can list and access the S3 Bucket:
 
 ```
-aws s3 ls s3://sourcesfrompocfirehose/direct
+aws s3 ls s3://sourcesfromexamplefirehose/direct
 ```
 
 or copy an object to local like: 
 ```
-aws s3 cp s3://sourcesfrompocfirehose/direct/PATH/TO/OBJECT/ .
+aws s3 cp s3://sourcesfromexamplefirehose/direct/PATH/TO/OBJECT/ .
 ```
 
   * ### Cleanup
-  run: terraform destroy --var-file ./poc.tfvar
+  run: terraform destroy --var-file ./example.tfvar
   note: if you get errors from an non-empty bucket ... you should know what you do (in case: delete first all objects manualle ... or the whole bucket ..) :) 
 
   * ### Troubleshooting / Common Errors
@@ -78,4 +78,11 @@ aws s3 cp s3://sourcesfrompocfirehose/direct/PATH/TO/OBJECT/ .
 
   Error: you get something like "cannot assume-role" or "No creds in EC2InstanceMetadata" 
   Run! 
-  
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## License
+
+This library is licensed under the MIT-0 License. See the LICENSE file.
