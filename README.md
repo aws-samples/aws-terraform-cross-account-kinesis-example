@@ -11,6 +11,7 @@
   * ### Terraform Setup
   install terraform like: https://learn.hashicorp.com/terraform/getting-started/install.html 
   download from here: https://www.terraform.io/downloads.html 
+  Terraform is licences under MPL-2.0, please refer to https://github.com/hashicorp/terraform for further information
 
   * ### Init for deployment
   run: terraform init
@@ -86,3 +87,5 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 ## License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
+
+Terraform is licences under MPL-2.0, please refer to https://github.com/hashicorp/terraform for further information
