@@ -126,7 +126,7 @@ resource "aws_lambda_function" "sourcefunc" {
   function_name = "s3-bucket-acl"
   role          = aws_iam_role.iam_for_sourcelambda.arn
   handler       = "index.handler"
-  runtime       = "nodejs10.x"
+  runtime       = "nodejs14.x"
   environment {
     variables = {
       rolearn = "arn:aws:iam::${var.account_b}:role/crossiam_for_sourcelambda"
@@ -298,7 +298,7 @@ resource "aws_lambda_function" "destinationfunc" {
   function_name = "s3-bucket-acl"
   role          = aws_iam_role.iam_for_destinationlambda.arn
   handler       = "index.handler"
-  runtime       = "nodejs10.x"
+  runtime       = "nodejs14.x"
   environment {
     variables = {
       rolearn = "arn:aws:iam::${var.account_b}:role/crossiam_for_destinationlambda"
